@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: cdc
+datasources:
+  default:
+    url: jdbc:mysql://127.0.0.1:3306/cdc_kotlin?createDatabaseIfNotExist=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    dialect: org.hibernate.dialect.MySQL8Dialect
+jpa.default.properties.hibernate.hbm2ddl.auto: update
