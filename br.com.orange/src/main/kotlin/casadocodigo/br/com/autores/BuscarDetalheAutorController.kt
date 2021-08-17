@@ -8,7 +8,7 @@ import io.micronaut.http.annotation.Get
 class BuscarDetalheAutorController(val autorRepository: AutorRepository) {
 
     @Get
-    fun buscarAutor(): HttpResponse<List<DetalheAutorResponse>> {
+    fun listarAutores(): HttpResponse<List<DetalheAutorResponse>> {
         val autores = autorRepository.findAll()
         val resposta = autores.map { autor -> DetalheAutorResponse(autor) }
 
