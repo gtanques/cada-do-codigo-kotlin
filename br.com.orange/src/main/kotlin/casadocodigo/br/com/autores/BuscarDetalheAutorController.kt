@@ -19,7 +19,7 @@ class BuscarDetalheAutorController(val autorRepository: AutorRepository) {
             return HttpResponse.ok(resposta)
         }
 
-        val possivelAutor = autorRepository.findByEmail(email)
+        val possivelAutor = autorRepository.buscarPorEmail(email)
 
         if (possivelAutor.isEmpty){
             return HttpResponse.notFound()
