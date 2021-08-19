@@ -6,6 +6,7 @@ plugins {
     id("io.micronaut.application") version "1.5.0"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.4.32"
     id ("org.jetbrains.kotlin.plugin.jpa") version "1.5.21"
+    id("org.jetbrains.kotlin.plugin.noarg") version "1.5.21"
 }
 
 version = "0.1"
@@ -44,6 +45,7 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.h2database:h2")
     implementation("io.micronaut:micronaut-validation")
+    implementation("io.micronaut.beanvalidation:micronaut-hibernate-validator")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
